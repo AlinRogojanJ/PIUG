@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Blogul Nostru</title>
+        <meta name="description" content="Blog culinar si de lifestyle">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/fontAwesome.css">
+        <link rel="stylesheet" href="css/hero-slider.css">
+        <link rel="stylesheet" href="css/owl-carousel.css">
+        <link rel="stylesheet" href="css/templatemo-style.css">
+        <link href="https://fonts.googleapis.com/css?family=Spectral:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+        
+    </head>
+
+    <body>
+        <div class="header navbar-fixed">
+            <div class="container">
+                <a href="#" class="navbar-brand scroll-top">Taverna Vestică</a>
+                <nav class="navbar navbar-inverse" role="navigation">
+                    <div class="navbar-header">
+                        <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                            <span class="sr-only">Comută navigarea</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div id="main-nav" class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="index.html">Acasă</a></li>
+                            <li><a href="menu.html">Meniurile Noastre</a></li>
+                            <li><a href="blog.html">Articole de Blog</a></li>
+                            <li><a href="gallery.html">Galerie</a></li>
+                            <li><a href="contact.html">Contactează-ne</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <section class="page-heading">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Blogul Nostru</h1>
+                        <!-- <p>Descoperă articole interesante despre gastronomie, lifestyle și multe altele! Mulțumim că ne vizitezi. Vă reamintim că redistribuirea acestui template este <strong>interzisă</strong> pe alte site-uri de descărcare.</p> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="blog-page">
+            <div class="container">
+                <div class="row">
+                    <!-- Conținut blog -->
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="blog-item">
+                            <img src="img/blog_item_01.jpg" alt="Rețetă tradițională">
+                            <div class="date">15 Decembrie 2024</div>
+                            <div class="down-content">
+                                <h4>Rețeta tradițională de sarmale</h4>
+                                <span>Gastronomie / Bucătar</span>
+                                <p>În această lună de iarnă, vă propunem o rețetă tradițională de sarmale, perfectă pentru mesele de sărbătoare...</p>
+                                <div class="text-button">
+                                    <a href="#">Continuă să citești</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Alte articole -->
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="blog-item">
+                            <img src="img/blog_item_02.jpg" alt="Secretul unui vin perfect">
+                            <div class="date">10 Decembrie 2024</div>
+                            <div class="down-content">
+                                <h4>Cum să alegi vinul perfect pentru fiecare ocazie</h4>
+                                <span>Gastronomie / Expert în vinuri</span>
+                                <p>Vinul nu este doar o băutură, ci o artă. Fiecare tip de vin are caracteristici care îl fac să fie potrivit...</p>
+                                <div class="text-button">
+                                    <a href="#">Continuă să citești</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Copyright &copy; 2024 Taverna Vestică | <a href="contact.html" id="helpLink">Help</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <button id="backToTop" onclick="scrollToTop()">
+            <i class="fa fa-arrow-up"></i>
+        </button>
+
+        <script>
+            // Script pentru evidențierea linkului activ
+            document.addEventListener("DOMContentLoaded", function () {
+                const currentPage = location.pathname.split("/").pop();
+                const navLinks = document.querySelectorAll(".navbar-nav li a");
+                navLinks.forEach(link => {
+                    if (link.getAttribute("href") === currentPage) {
+                        link.parentElement.classList.add("active");
+                    }
+                });
+            });
+
+            // Script pentru scroll la partea de sus
+            window.onscroll = function() {
+                const button = document.getElementById("backToTop");
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    button.style.display = "block";
+                } else {
+                    button.style.display = "none";
+                }
+            };
+
+            function scrollToTop() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            }
+        </script>
+    </body>
+</html>
